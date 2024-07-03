@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  
+  
+ 
+  <title>AtWork</title>
+ 
+
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Vendors styles-->
+  <link rel="stylesheet" href="assets/scss/simplebar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="assets/scss/style.css" rel="stylesheet">
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- We use assets/sthose styles to show code examples, you should remove them in your application.-->
+  <link href="assets/scss/examples.css" rel="stylesheet">
+ 
+  <link href="assets/scss/ads.css" rel="stylesheet">
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/color-modes.js"></script>
+  <link href="assets/scss/sujitui.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  .greenbutton{
+    background: rgba(13, 205, 148, 0.1);
+    color: #0dcd94;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .redbutton{
+    background: rgba(247, 40, 74, 0.1);
+    color: #f7284a;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .bscj{
+      background: #f1f4fb;
+    }
+</style>
+
+<style>
+
+
+.mycard{
+  border: none !important;
+  color: #263871;
+}
+
+.search-element {
+  position: relative;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.header-search {
+  padding-right: 30px; /* Adjust padding to make space for the icon */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure the icon doesn't interfere with input actions */
+}
+.card{
+  border-radius: 15px;
+}
+.cardheader {
+   
+    background-color: white;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom: var(--cui-card-border-width) solid #9ba5ca7a;
+}
+.mycardrow{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.text-dark {
+    color: #263871 !important;
+}
+.text-muted {
+    color: #9ba5ca !important;
+}
+.fs-12 {
+    font-size: 12px;
+}.fs-16 {
+    font-size: 16px !important;
+}
+.fs-18 {
+    font-size: 18px !important;
+}.text-success {
+    color: #0dcd94 !important;
+}
+.font-weight-semibold {
+    font-weight: 500 !important;
+}
+h5,h6,h1,h2,h4,h3{
+  color: #263871;
+}
+.mybody {
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d3dfea;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius: 5px;
+    outline: 0;
+    color: #263871;
+    opacity: 1;
+}.form-label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #263871;
+}
+.myfooter{
+  padding: 25px;
+  border-top: 1px solid #d3dfea;
+  background-color: white;
+  border-bottom-left-radius: 15px !important;
+border-bottom-right-radius: 15px !important;
+
+}
+.fs-14 {
+    font-size: 14px;
+}
+.text-orange {
+    color: #f34932 !important;
+}
+.card-title {
+    line-height: 1.2;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.bsdg {
+    background-color: #dee5f7;
+    border: none;
+    
+    border-radius: 5px;
+    width: 40px;
+    height: 35px;
+}
+</style>
+</head>
+
+<body>
+  <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar" style="background: #17263a;">
+    <div class="sidebar-header border-bottom">
+      <div class="sidebar-brand">
+        <img class="sidebar-brand-full"  src="assets/img/Logo.png" width="150" height="32">
+        
+          
+        </svg>
+      </div>
+      <button class="header-toggler" type="button"
+        onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+        <svg class="icon icon-lg">
+          <use xlink:href="assets/icons/menu.svg"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+      <li class="nav-item"><a class="nav-link active" href="index.html">
+          <i class="fa-solid fa-tachometer-alt pe-2"></i> Dashboard</a></li>
+
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid fa-users pe-2"></i> Employee</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="base/accordion.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Employee</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid fa-note-sticky pe-2"></i> Attendance</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Tna Data Viewer</a></li>
+          <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Attendance Update </a></li>
+          <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Leave Entry</a></li>
+
+        </ul>
+      </li>
+
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid  fa-wallet pe-2"></i> Salary</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="forms/form-control.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Salary Data Sheet</a></li>
+          <li class="nav-item"><a class="nav-link" href="forms/select.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Salary Data 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="forms/checks-radios.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Increment and Arrear</a></li>
+
+        </ul>
+      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid fa-screwdriver-wrench pe-2"></i> Tools</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Update Data from Tna<span
+                class="badge badge-sm bg-success ms-auto"></span></a></li>
+          <li class="nav-item"><a class="nav-link" ><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Full and Final</a></li>
+
+        </ul>
+      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid fa-check-double pe-2"></i> Approvals</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Leaves</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Loan/Advance</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Expenses</a></li>
+
+        </ul>
+      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid fa-gears pe-2"></i>Settings</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Branch and Division</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Department</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Designation</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Shift</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Allowance</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Deduction</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Holiday</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Configuration</a></li>
+
+
+        </ul>
+      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-regular fa-file pe-2"></i> Reports</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Employee Master Report</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Attendance Report</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/modals.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Salary Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Leave Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Loan and Advance Report</a></li>
+
+
+
+        </ul>
+      </li>
+      <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <i class="fa-solid fa-people-roof pe-2"></i>People Management</a>
+        <ul class="nav-group-items compact">
+          <li class="nav-item"><a class="nav-link" href="notifications/alerts.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> Users</a></li>
+          <li class="nav-item"><a class="nav-link" href="notifications/badge.html"><span class="nav-icon"><span
+                  class="nav-icon-bullet"></span></span> User role</a></li>
+
+
+
+
+        </ul>
+      </li>
+
+      <li class="nav-divider"></li>
+
+    </ul>
+    <div class="sidebar-footer border-top d-md-flex " style="color: white;">
+      <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+    </div>
+  </div>
+  <div class="wrapper d-flex flex-column min-vh-100">
+    <header class="header header-sticky p-0 ">
+      <div class="container-fluid  px-4">
+        <button class="header-toggler bscj " type="button"
+          onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <ul class="header-nav d-lg-flex">
+          <li class="nav-item">
+           
+            <div class="search-element">
+              <input type="search" class="form-control header-search" placeholder="Search…" aria-label="Search" tabindex="1" style="
+              background-color: #f1f4fb;    border: none;
+          ">
+              <i class="fas fa-search search-icon"></i>
+            </div>
+            
+          
+        </li>
+          <li class="nav-item"><a class="nav-link d-none" href="#">Users</a></li>
+          <li class="nav-item"><a class="nav-link d-none" href="#">Settings</a></li>
+        </ul>
+        <ul class="header-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">
+              <svg class="icon icon-lg">
+                
+              </svg></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+              <svg class="icon icon-lg">
+               
+              </svg></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">
+            <i class="fa-solid fa-bell "style="
+    font-size: 25px;"></i></a></li>
+              <li class="nav-item dropdown">
+                <button class="btn btn-link nav-link py-2 px-2 d-flex align-items-center" type="button" aria-expanded="false" data-coreui-toggle="dropdown">
+                  <svg class="icon icon-lg theme-icon-active">
+                    <i class="fa-solid fa-moon " style="
+    font-size: 25px;
+"></i>
+                    <use xlink:href="vendors/@@coreui/icons/svg/free.svg#cil-contrast"></use>
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" style="--cui-dropdown-min-width: 8rem;">
+                  <li>
+                    <button class="dropdown-item d-flex align-items-center" type="button" data-coreui-theme-value="light">
+                      Light
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item d-flex align-items-center" type="button" data-coreui-theme-value="dark">
+                      Dark
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item d-flex align-items-center active" type="button" data-coreui-theme-value="auto">
+                     Auto
+                    </button>
+                  </li>
+                </ul>
+              </li>
+        </ul>
+
+        <ul class="header-nav">
+          <li class="nav-item dropdown "><a class="nav-link py-0 pe-0" data-coreui-toggle="dropdown" href="#"
+              role="button" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/8.jpg"
+                  alt="user@@email.com"></div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end pt-0">
+              <div class="dropdown-header bg-body-tertiary text-body-secondary fw-semibold rounded-top mb-2">Account
+              </div><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a class="dropdown-item"
+                href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
+              <div class="dropdown-header bg-body-tertiary text-body-secondary fw-semibold my-2">
+                <div class="fw-semibold">Settings</div>
+              </div>
+              <a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                
+                </svg> Profile</a><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                  
+                </svg> Settings</a><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a><a class="dropdown-item"
+                href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                 
+                </svg> Lock Account</a><a class="dropdown-item" href="#">
+                <svg class="icon me-2">
+                  
+                </svg> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </header>
+    <div class="body flex-grow-1 pt-4" style="
+    background: #f1f4fb ;
+">
+      <div class="container-lg px-4">
+
+        <!-- /.row-->
+        <div class="row   p-3">
+          <div class="d-flex justify-content-between  mb-1">
+            <div class="card-header p-2"><strong style="font-size: 20px;">Employee</strong></div>
+            
+            <div class="p-2 "><button class="btn btn-primary" type="button">
+              <i class="fa-solid fa-user-plus pe-1"></i>Add Employee
+            </button>
+            <button class="bsdg"><i class="fa-solid fa-phone"></i></button>
+            <button class="bsdg"><i class="fa-regular fa-envelope"></i></button>
+          </div>
+          </div>
+        </div>
+        <div class="row g-4 mb-4">
+          <div class="col-xl-3 col-md-12 col-lg-12">
+            <div class="card mycard">
+              <div class="card-header cardheader  text-center background-color white" style="
+    border-radius: 15px;
+"><div>
+<img class="avatar-img icon icon-3xl text-white my-2" src="assets/img/avatars/2.jpg"/>
+</div>
+               
+               <div class=" mb-3 ">
+                <h5 class=" text-dark mb-1 fs-16">Faith Harris</h5>
+                <h6 class=" text-muted fs-12">Web Designer</h6>
+              </div>
+                
+              </div>
+              <div class="card-body row text-center">
+                <div class="row mycardrow">
+                  <div class="col">
+                    <h5 class="fs-12 font-weight-semibold mb-2">January</h5>
+												<h5 class="mb-1">
+													<span class="fs-18 text-success">22</span>
+													<span class="my-auto fs-9 font-weight-normal  ms-1 me-1">/</span>
+													<span class="fs-18 font-weight-semibold text-dark">31</span>
+												</h5>
+												<h5 class="fs-12 mb-0">Attendance</h5>
+                  </div>
+                  <div class="vr"></div>
+                  <div class="col">
+                    <h5 class="fs-12 font-weight-semibold mb-2">Year-2021</h5>
+												<h5 class="mb-1">
+													<span class="fs-18 text-orange">0</span>
+													<span class="my-auto fs-9 font-weight-normal  ms-1 me-1">/</span>
+													<span class="fs-18 font-weight-semibold text-dark">41</span>
+												</h5>
+												<h5 class="fs-12 mb-0">Leaves</h5>
+                  </div>
+                  <div class="vr"></div>
+                  <div class="col">
+                    
+                      <h5 class="fs-12 font-weight-semibold mb-2">Year-2021</h5>
+                      <h5 class="mb-1">
+                        <span class="fs-18 text-primary">0</span>
+                      </h5>
+                      <h5 class="fs-12 mb-0">Awards</h5>
+                    
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+
+
+            
+            <div class="card mycard mt-5">
+              <div class="card-header cardheader  text-center background-color white" style="
+    border-radius: 15px;
+    border-bottom: none;
+">
+<div class="card-title">Statistics-2024</div>
+<div class="row mycardrow mb-1">
+  <div class="col-4 text-center">
+    <canvas id="attendanceChart" width="64" height="64"></canvas>
+    <h6 class="fs-14 font-weight-semibold mt-3">Attendance</h6>
+  </div>
+  <div class="col-4 text-center">
+    <canvas id="projectsChart" width="64" height="64"></canvas>
+    <h6 class="fs-14 font-weight-semibold mt-3">Projects</h6>
+  </div>
+  <div class="col-4 text-center">
+    <canvas id="performanceChart" width="64" height="64"></canvas>
+    <h6 class="fs-14 font-weight-semibold mt-3">Performance</h6>
+  </div>
+</div>
+</div>
+               
+               
+                
+              
+              <div class="card-body  text-center">
+                <div class="row mycardrow">
+                  <div class="progress-group">
+                    <div class="progress-group-header">
+                      
+                      <div>This Week</div>
+                      <div class="ms-auto fw-semibold">43%</div>
+                    </div>
+                    <div class="progress-group-bars">
+                      <div class="progress progress-thin">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 43%" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress-group">
+                    <div class="progress-group-header">
+                      
+                      <div>This Month</div>
+                      <div class="ms-auto fw-semibold">43%</div>
+                    </div>
+                    <div class="progress-group-bars">
+                      <div class="progress progress-thin">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="progress-group">
+                    <div class="progress-group-header">
+                      
+                      <div>This Year</div>
+                      <div class="ms-auto fw-semibold">43%</div>
+                    </div>
+                    <div class="progress-group-bars">
+                      <div class="progress progress-thin">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 9%" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+            
+          </div>
+          <style>
+            .hremp-tabs .tabs-menu1 ul li a {
+    border: 0;
+    background: #dee5f7;
+    border-bottom: 0;
+    margin: 0 0.5rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: -1px;
+    padding: 12px 22px 12px 22px;
+    color: #424e79;
+}
+          </style>
+          <!-- /.col-->
+          <div class="col-xl-9 col-md-12 col-lg-12">
+            <div class="tab-menu-heading hremp-tabs p-0">
+              <div class="tabs-menu1">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs panel-tabs" role="tablist" style="
+    border-bottom: none;
+">
+                  <li class="nav-item ms-1">
+                    <a href="#tab5" class="nav-link " data-bs-toggle="tab">Personal Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#tab6" class="nav-link " data-bs-toggle="tab">Company Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#tab7" class="nav-link" data-bs-toggle="tab">Bank Details</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#tab8" class="nav-link" data-bs-toggle="tab">Upload Documents</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body tabs-menu-body hremp-tabs1 p-0">
+              <div class="tab-content">
+                
+                <div class="tab-pane fade show active " id="tab5">
+                  <div class="card-body mybody">
+                    <h4 class="mb-4 font-weight-bold">Basic</h4>
+                    <div class="form-group ">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">User Name</label>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input type="text" class="form-control mb-md-0 mb-5" placeholder="First Name" value="Faith">
+                              <span class="text-muted"></span>
+                            </div>
+                            <div class="col-md-6">
+                              <input type="text" class="form-control" placeholder="Last Name" value="Harris">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Father Name</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Name" value="kyari">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Contact Number</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Phone Number" value="9685321475">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Emergency Contact Number 01</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Contact Number01" value="8695324712">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Emergency Contact Number 02</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Contact Number02" value="9966583155">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Date Of Birth</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="DD-MM-YYY" value="10-01-1994" id="dp1719991502849">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label">Gender</label>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="custom-controls-stacked d-md-flex">
+                            <label class="custom-control custom-radio me-4">
+                              <input type="radio" class="custom-control-input" name="example-radios4" value="option1">
+                              <span class="custom-control-label">Male</span>
+                            </label>
+                            <label class="custom-control custom-radio">
+                              <input type="radio" class="custom-control-input" name="example-radios4" value="option2" checked="">
+                              <span class="custom-control-label">Female</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Marital Status</label>
+                        </div>
+                        <div class="col-md-9">
+                          <select name="projects" class="form-control custom-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                            <option value="0">Select</option>
+                            <option value="1" selected="">Single</option>
+                            <option value="2">Married</option>
+                          </select>
+                          <span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;">
+                            <span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false"
+                               tabindex="0" aria-labelledby="select2-projects-xb-container"><span class="select2-selection__arrow" role="presentation"><b role="presentation">
+                                
+                               </b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Blood Group</label>
+                        </div>
+                        <div class="col-md-9">
+                          <select name="projects" class="form-control custom-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                            <option value="0">A+</option>
+                            <option value="1" selected="">B+</option>
+                            <option value="2">O+</option>
+                            <option value="3">AB+</option>
+                            <option value="4">A-</option>
+                            <option value="5">B-</option>
+                            <option value="6">O-</option>
+                            <option value="7">AB-</option>
+                          </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-projects-p2-container"><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Email</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="email" value="faith@gmail.com">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Present Address</label>
+                        </div>
+                        <div class="col-md-9">
+                          <textarea rows="3" class="form-control" placeholder="Address1">4102 Masonic Hill Road Little Rock Arkansas-727212</textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Permanent Address</label>
+                        </div>
+                        <div class="col-md-9">
+                          <textarea rows="3" class="form-control" placeholder="Address2">4102 Masonic Hill Road Little Rock Arkansas-727212</textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">Upload Photo</div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="form-group">
+                          <label class="form-label"></label>
+                            <input class="form-control" type="file">
+                                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="mb-5 mt-7 font-weight-bold">Account Login</h4>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Employee Email</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="employee email" value="faith@gmail.com">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Password</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="password" class="form-control" placeholder="password" value="12345">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt-7">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label">Email Notification:</label>
+                        </div>
+                        <div class="col-md-9">
+                          <label class="custom-switch">
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+                            <span class="custom-switch-indicator"></span>
+                            <span class="custom-switch-description">On/Off</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="tab-pane fade " id="tab6">
+                  <div class="card-body mybody">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Employee ID</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="#ID" value="#2987">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Department</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Department" value="Designing Department">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Designation</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Designation" value="Web Designer">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Date Of Joining</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="DD-MM-YYYY" value="05-05-2017" id="dp1719991502850">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Resignation Date</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="DD-MM-YYYY" id="dp1719991502851">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Termination Date</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control fc-datepicker hasDatepicker" placeholder="DD-MM-YYYY" id="dp1719991502852">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Credit Leaves
+                            <span class="form-help" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Unused leaves for the Employee">?</span>
+                          </label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="0">
+                        </div>
+                      </div>
+                    </div>
+                    <h4 class="mb-5 mt-7 font-weight-bold">Salary</h4>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Type</label>
+                        </div>
+                        <div class="col-md-9">
+                          <select class="form-control custom-select select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                            <option value="0" selected="">Full-Time</option>
+                            <option value="1">Part-Time</option>
+                          </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9a1g-container"><span class="select2-selection__rendered" id="select2-9a1g-container" title="Full-Time">Full-Time</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Salary</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="$Salary" value="$28000">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt-7">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label">Status:</label>
+                        </div>
+                        <div class="col-md-9">
+                          <label class="custom-switch">
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked="">
+                            <span class="custom-switch-indicator"></span>
+                            <span class="custom-switch-description">Active/Inactive</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab7">
+                  <div class="card-body mybody">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Account Holder</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Name" value="Faith Harris">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Account Number</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Number" value="36985214704">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Bank Name</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Name" value="ABCD Bank">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Branch Location</label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Location" value="Little Rock Arkansas">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Bank Code (IFSC)
+                            <span class="form-help" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Bank Identify Number in your Country">?</span>
+                          </label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="Code" value="ABC0002189">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label class="form-label mb-0 mt-2">Tax Payer ID (PAN)
+                            <span class="form-help" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Taxpayer Identification Number Used in your Country">?</span>
+                          </label>
+                        </div>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" placeholder="ID No">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab8">
+                  <div class="card-body mybody">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">Resume</div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="form-group">
+                            <label class="form-label"></label>
+                            <input class="form-control" type="file">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">ID Proof</div>
+                        </div>
+                        <div class="col-md-9">
+                        <div class="form-group">
+                          <label class="form-label"></label>
+                            <input class="form-control" type="file">
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">Offer Letter</div>
+                        </div>
+                        <div class="col-md-9">
+                              <div class="form-group">
+                               <label class="form-label">Attachment:</label>
+                              <input class="form-control" type="file">
+                                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">Joining Letter</div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="form-group">
+                            <label class="form-label"></label>
+                              <input class="form-control" type="file">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">Agreement Letter</div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="form-group">
+                            <label class="form-label">Attachment:</label>
+                              <input class="form-control" type="file">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-label mb-0 mt-2">Experience Letter</div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="form-group">
+                            <label class="form-label">Attachment:</label>
+                            <input class="form-control" type="file">
+                                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer myfooter text-end " ">
+                  <a href="javascript:void(0);" class="btn btn-primary">Updated</a>
+                  <a href="javascript:void(0);" class="btn btn-danger">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- /.col-->
+          
+          <!-- /.col-->
+        </div>
+        <!-- /.row-->
+        
+        <!-- /.col-->
+      </div>
+      <!-- /.row-->
+    </div>
+  </div>
+  <footer class="footer px-4">
+    <div>Sujit </a> © 2024 zorder.</div>
+    <div class="ms-auto">Powered by&nbsp;Sujit UI Components</a></div>
+  </footer>
+  </div>
+  
+  
+  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+  <script src="assets/js/coreui.bundle.min.js"></script>
+  <script src="assets/js/simplebar.min.js"></script>
+  <script>
+    const header = document.querySelector('header.header');
+
+    document.addEventListener('scroll', () => {
+      if (header) {
+        header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+      }
+    });
+   
+  </script>
+  <!-- Plugins and scripts required by this view-->
+   
+  <script src="assets/js/chart.umd.js"></script>
+  <script src="assets/js/coreui-chartjs.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/carbon.js"></script>
+  <script src="assets/js/dataTables.bootstrap5.js"></script>
+  <script src="assets/js/dataTables.js"></script>
+  <script>
+  </script>
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.nav-tabs a').on('click', function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    });
+  });
+</script>
+<script>
+  const config = (value, color) => ({
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [value, 100 - value],
+        backgroundColor: [color, '#eaeaea'],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      responsive: true,
+      cutout: '90%',
+      plugins: {
+        tooltip: {
+          enabled: false
+        },
+        legend: {
+          display: false
+        }
+      }
+    },
+    plugins: [{
+      id: 'text',
+      beforeDraw: (chart) => {
+        const width = chart.width;
+        const height = chart.height;
+        const ctx = chart.ctx;
+        ctx.restore();
+        const fontSize = (height / 114).toFixed(2);
+        ctx.font = fontSize + "em sans-serif";
+        ctx.textBaseline = "middle";
+        const text = value + '%';
+        const textX = Math.round((width - ctx.measureText(text).width) / 2);
+        const textY = height / 2;
+        ctx.fillStyle = color; // Set the text color to match the chart color
+        ctx.fillText(text, textX, textY);
+        ctx.save();
+      }
+    }]
+  });
+
+  const attendanceChart = new Chart(
+    document.getElementById('attendanceChart').getContext('2d'),
+    config(89, '#3366ff')
+  );
+
+  const projectsChart = new Chart(
+    document.getElementById('projectsChart').getContext('2d'),
+    config(23, '#fe7f00')
+  );
+
+  const performanceChart = new Chart(
+    document.getElementById('performanceChart').getContext('2d'),
+    config(67, '#0dcd94')
+  );
+</script>
+</body>
+
+</html>
